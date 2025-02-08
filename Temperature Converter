@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+            background-color: #AC6182;
+        }
+        .converter {
+            background-color: #B8B7AA;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .converter input, .converter select, .converter button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter"> 
+        <h2>Temperature Converter</h2>
+        <input type="number" id="temperature" placeholder="Enter temperature">
+        <select id="unit">
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Celsius">Celsius</option>
+            <option value="Kelvin">Kelvin</option>
+        </select>
+        <button onclick="convertTemperature()">Convert</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        function convertTemperature() {
+            const temp = parseFloat(document.getElementById('temperature').value);
+            const unit = document.getElementById('unit').value;
+            let result = '';
+
+            if (isNaN(temp)) {
+                result = 'Please enter a valid number!';
+            } else {
+                switch (unit) {
+                    case 'Celsius':
+                        result = `${temp}°C = ${(temp * 9/5 + 32).toFixed(2)}°F = ${(temp + 273.15).toFixed(2)}K`;
+                        break;
+                    case 'Fahrenheit':
+                        result = `${temp}°F = ${((temp - 32) * 5/9).toFixed(2)}°C = ${(((temp - 32) * 5/9) + 273.15).toFixed(2)}K`;
+                        break;
+                    case 'Kelvin':
+                        result = `${temp}K = ${(temp - 273.15).toFixed(2)}°C = ${((temp - 273.15) * 9/5 + 32).toFixed(2)}°F`;
+                        break;
+                }
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>
