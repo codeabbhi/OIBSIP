@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landingpage</title>
+    <style>
+        body{
+            background-color: #2596be;
+
+        }
+        tr{
+            color: black;
+            font-style: oblique;
+            font-weight: 100;
+            
+        }
+        td{
+            color: black;
+            font-variant: unset;
+            padding: auto;
+            text-align: center;
+        }
+        th{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table 
+    border="4"
+    text align="center"
+    cell spadding="20">
+       
+    <tr>
+        <th>SNO</th>
+        <th>NAME</th>
+        <th>IDNO</th>
+        <th>BRANCH</th>
+        <th>EMAIL</th>
+    </tr>
+    <tr>
+        <td>01</td>
+        <td>Abhiram</td>
+        <td>554</td>
+        <td>B.E</td>
+        <td>abbhii@gmail</td>
+    </tr>
+    <tr>
+        <td>02</td>
+        <td>Madhusudhan</td>
+        <td>537</td>
+        <td>BCA</td>
+        <td>madhusudhan@gmail</td>
+    </tr>
+    <tr>
+        <td>03</td>
+        <td>Scott</td>
+        <td>456</td>
+        <td>B.com</td>
+        <td>scott12@gmail</td>
+    </tr>
+    <tr>
+        <td>04</td>
+        <td>Pazaa</td>
+        <td>423</td>
+        <td>BBA</td>
+        <td>pulssae@gmail</td>
+    </tr>
+    <tr>
+        <td>05</td>
+        <td>Harai</td>
+        <td>345</td>
+        <td>BA</td>
+        <td>haraii@gmail</td>
+    </tr>
+
+    </table>
+</body>
+</html>
